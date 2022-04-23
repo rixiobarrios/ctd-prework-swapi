@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Star Wars API Call App</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <img src="/starwarscall.png">
-    <nav><ul><il>
-        <h3>Home</h3>
-        <h3>Characters</h3>
-        <h3>Films</h3>
-    </il></ul></nav>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/index.html" class="navbar-links">Home </a>
+            <a href="/characters.html" class="navbar-links">Characters</a>
+                        <a href="/films.html" class="navbar-links">Films</a>
+        </div>
+    </nav>
     <div class="info-container"></div>
     <div id="app"></div>
     <button type="button" id="button" name="button">Fetch</button>

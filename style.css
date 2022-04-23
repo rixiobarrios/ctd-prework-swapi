@@ -1,4 +1,13 @@
+
+* {
+
+text-align: center;
+
+}
+
 body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
     /* background-color: black; */
     background-color: white;
 }
@@ -7,6 +16,25 @@ img {
     width: 65%;
     height: auto;
 }
+
+/* .navbar {
+    color:black;
+} */
+
+/* .navbar-container {
+    color:black;
+} */
+
+.navbar-links {
+    font-weight: bolder;
+    font-size: 120%;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* color: '#FCE919'; */
+    list-style-type: none;
+    margin: 0 40px;
+}
+
 
 .character-title {
     color: #e74c3c;
@@ -34,4 +62,9 @@ img {
     padding: 8px;
 }
 
-
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        position: relative;
+    }
+}
