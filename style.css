@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+img {
+    width: 65%;
+    height: auto;
+}
+
+.character-title {
+    color: #e74c3c;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 0.2rem 0 0.2rem 0;
+}
+
+.character-text {
+    color: blueviolet;
+    margin-left: 2px;
+    padding: 8px;
+}
+
+.film-title {
+    color: #e74c3c;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 0.2rem 0 0.2rem 0;
+}
+
+.film-text {
+    color: blueviolet;
+    margin-left: 2px;
+    padding: 8px;
+}
+
+
