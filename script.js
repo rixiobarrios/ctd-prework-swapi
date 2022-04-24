@@ -1,22 +1,18 @@
-let baseUrl = 'https://swapi.dev/api/people/1/';
-let person = document.getElementById('app');
+let charactersUrl = `https://swapi.dev/api/people/1/`;
+let filmsUrl = `https://swapi.dev/api/films/1/`;
+let character = document.getElementById('character');
+let film = document.getElementById('film');
 
-fetch(baseUrl)
+fetch(charactersUrl)
     .then((response) => response.json())
     .then((json) => {
-        console.log(json);
-        person.innerHTML = `<h1>${json.name}</h1>`;
-        // person.innerHTML = `<h1>${json.homeworld}</h1>`;
-        // person.innerHTML = `<h1>${json.films[1]}</h1>`;
-        // person.innerHTML = `<h1>${json.mass}</h1>`;
-        // person.innerHTML = `<h1>${json.height}</h1>`;
-        // person.innerHTML = `<h1>${json.hair_color}</h1>`;
+        console.log(json.name);
+        character.innerHTML = `<h1>${json.name}</h1>`;
     });
 
-// let button = document.querySelector('#button');
-
-// function youClickedMe() {
-//     console.log('You clicked me');
-// }
-
-// button.addEventListener('click', youClickedMe);
+fetch(filmsUrl)
+    .then((response) => response.json())
+    .then((json) => {
+        console.log(json.title);
+        film.innerHTML = `<h1>${json.title}</h1>`;
+    });

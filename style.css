@@ -9,7 +9,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: black;
     color: '#FCE919';
-    /* background-color: white; */
 }
 
 img {
@@ -17,12 +16,7 @@ img {
     height: auto;
 }
 
-/* .navbar {
-    color:black;
-} */
-
 .navbar-container {
-    /* color:black; */
     padding-bottom: 5%;
 }
 
