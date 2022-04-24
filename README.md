@@ -98,6 +98,6 @@ Content-Type: application/json
 
 9. Repository has been created [here](https://github.com/rixiobarrios/ctd-swapi)
 
-# See deployed version [here](https://ctd-prework-swapi.netlify.app/)
+**See deployed version [here](https://ctd-prework-swapi.netlify.app/)**
 
 
