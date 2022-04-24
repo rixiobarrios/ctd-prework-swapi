@@ -49,6 +49,7 @@ function filmDetails(url) {
                         charsNode.appendChild(charNode);
                     });
             });
+            //remove previous rendering
             while (films.firstChild) {
                 films.removeChild(films.firstChild);
             }

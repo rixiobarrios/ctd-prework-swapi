@@ -29,7 +29,6 @@ function characterDetails(url) {
     fetch(url)
         .then((res) => res.json())
         .then((result) => {
-            // console.log(result);
             const nameNode = document.createElement('h2');
             const nameText = document.createTextNode(result.name);
             nameNode.appendChild(nameText);
