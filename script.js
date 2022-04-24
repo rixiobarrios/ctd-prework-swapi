@@ -1,21 +1,21 @@
 let charactersUrl = `https://swapi.dev/api/people/`;
 let filmsUrl = `https://swapi.dev/api/films/`;
-let characters = document.getElementById('character');
+let people = document.getElementById('people');
 let films = document.getElementById('film');
 
 fetch(charactersUrl)
     .then((response) => response.json())
     .then((res) => {
         // console.log(res.results);
-        res.results.map((char) => {
+        res.results.map((data) => {
             // console.log(char.name);
             const node = document.createElement('div');
-            const textNode = document.createTextNode(char.name);
+            const textNode = document.createTextNode(data.name);
             node.appendChild(textNode);
             node.addEventListener('click', function () {
-                characterDetails(char.name);
+                characterDetails(data.name);
             });
-            characters.appendChild(node);
+            people.appendChild(node);
         });
     });
 
@@ -23,7 +23,7 @@ function characterDetails(url) {
     fetch(url)
         .then((res) => res.json())
         .then((result) => {
-            console.log(result);
+            // console.log(result);
             const nameNode = document.createElement('h2');
             const nameText = document.createTextNode(result.name);
             nameNode.appendChild(nameText);
@@ -42,10 +42,10 @@ function characterDetails(url) {
             // const eyeNode = document.createElement('div');
             // const eyeText = document.createTextNode(result.eye_color);
             // eyeNode.appendChild(eyeText);
-            while (characters.firstChild) {
-                characters.removeChild(characters.firstChild);
+            while (people.firstChild) {
+                people.removeChild(people.firstChild);
             }
-            characters.appendChild(nameNode);
+            people.appendChild(nameNode);
             // characters.appendChild(heightNode);
             // characters.appendChild(massNode);
             // characters.appendChild(hairNode);
@@ -61,12 +61,12 @@ fetch(filmsUrl)
         res.results.map((film) => {
             // console.log(film.url);
             const node = document.createElement('div');
-            const textnode = document.createTextNode(film.title);
-            node.appendChild(textnode);
+            const textNode = document.createTextNode(film.title);
+            node.appendChild(textNode);
             node.addEventListener('click', function () {
                 filmDetails(film.url);
             });
-            films.appendChild(node);
+            films.appendChild(node); //TypeError here
         });
     });
 
@@ -78,13 +78,17 @@ function filmDetails(url) {
             const titleNode = document.createElement('h2');
             const titleText = document.createTextNode(result.title);
             titleNode.appendChild(titleText);
-            const crawlNode = document.createElement('div');
+            const crawlNode = document.createElement('p');
             const crawlText = document.createTextNode(result.opening_crawl);
             crawlNode.appendChild(crawlText);
+            const charNode = document.createElement('div');
+            const charText = document.createTextNode(result.characters); //showing as urls
+            charNode.appendChild(charText);
             while (films.firstChild) {
                 films.removeChild(films.firstChild);
             }
             films.appendChild(titleNode);
             films.appendChild(crawlNode);
+            films.appendChild(charNode);
         });
 }
