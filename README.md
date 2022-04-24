@@ -92,7 +92,7 @@ Content-Type: application/json
 
 6. Two links provide access to both models
 
-7. Pending
+7. Models allow to view characters in the film and films for characters
 
 8. Two get requests are built for both data models
 
