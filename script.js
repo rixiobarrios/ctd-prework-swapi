@@ -24,17 +24,17 @@ function characterDetails(url) {
         .then((res) => res.json())
         .then((result) => {
             console.log(result);
-            const charNode = document.createElement('h2');
-            const charText = document.createTextNode(result.name);
-            charNode.appendChild(charText);
-            // const massNode = document.createElement('div');
-            // const massText = document.createTextNode(result.mass);
-            charNode.appendChild(charText);
+            const nameNode = document.createElement('h2');
+            const nameText = document.createTextNode(result.name);
+            nameNode.appendChild(nameText);
+            const massNode = document.createElement('div');
+            const massText = document.createTextNode(result.mass);
+            nameNode.appendChild(nameText);
             while (characters.firstChild) {
                 characters.removeChild(characters.firstChild);
             }
-            characters.appendChild(charNode);
-            characters.appendChild(charNode);
+            characters.appendChild(nameNode);
+            characters.appendChild(massNode);
         });
 }
 
