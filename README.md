@@ -35,6 +35,8 @@ The following are not necessary, but are examples of things that would be nice b
 
 # The Project
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22f29b1c-c0c6-424b-b464-570e1496d694/deploy-status)](https://app.netlify.com/sites/ctd-prework-swapi/deploys)
+
 ![starwarscall](https://user-images.githubusercontent.com/55994508/163671473-5f1cda65-9dc3-46df-be6e-37b33d6752eb.jpg)
 
 1. The project uses HTML, CSS and Javascript.
@@ -95,5 +97,7 @@ Content-Type: application/json
 8. Two get requests are built for both data models
 
 9. Repository has been created [here](https://github.com/rixiobarrios/ctd-swapi)
+
+#See deployed version [here](https://ctd-prework-swapi.netlify.app/)
 
 
