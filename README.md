@@ -86,10 +86,14 @@ Content-Type: application/json
 - clone link and download option can be found from right side of the repository  page
 - Unzip the file and open the project on your terminal by navigating to the folder
 
-5. Pending
-6. Pending
+5. Data for people and films are displayed
+
+6. Two links provide access to both models
+
 7. Pending
-8. Pending
-9. Pending
+
+8. Two get requests are built for both data models
+
+9. Repository has been created [here](https://github.com/rixiobarrios/ctd-swapi)
 
 

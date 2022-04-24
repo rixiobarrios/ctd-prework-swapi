@@ -10,8 +10,8 @@ fetch(charactersUrl)
         res.results.map((char) => {
             // console.log(char.name);
             const node = document.createElement('div');
-            const textnode = document.createTextNode(char.name);
-            node.appendChild(textnode);
+            const textNode = document.createTextNode(char.name);
+            node.appendChild(textNode);
             node.addEventListener('click', function () {
                 characterDetails(char.name);
             });
@@ -27,14 +27,30 @@ function characterDetails(url) {
             const nameNode = document.createElement('h2');
             const nameText = document.createTextNode(result.name);
             nameNode.appendChild(nameText);
-            const massNode = document.createElement('div');
-            const massText = document.createTextNode(result.mass);
-            nameNode.appendChild(nameText);
+            // const heightNode = document.createElement('div');
+            // const heightText = document.createTextNode(result.height);
+            // heightNode.appendChild(heightText);
+            // const massNode = document.createElement('div');
+            // const massText = document.createTextNode(result.mass);
+            // massNode.appendChild(massText);
+            // const hairNode = document.createElement('div');
+            // const hairText = document.createTextNode(result.hair_color);
+            // hairNode.appendChild(hairText);
+            // const skinNode = document.createElement('div');
+            // const skinText = document.createTextNode(result.skin_color);
+            // skinNode.appendChild(skinText);
+            // const eyeNode = document.createElement('div');
+            // const eyeText = document.createTextNode(result.eye_color);
+            // eyeNode.appendChild(eyeText);
             while (characters.firstChild) {
                 characters.removeChild(characters.firstChild);
             }
             characters.appendChild(nameNode);
-            characters.appendChild(massNode);
+            // characters.appendChild(heightNode);
+            // characters.appendChild(massNode);
+            // characters.appendChild(hairNode);
+            // characters.appendChild(skinNode);
+            // characters.appendChild(eyeNode);
         });
 }
 
